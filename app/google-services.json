@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "241174673211",
+    "firebase_url": "https://yaran-7e7f0.firebaseio.com",
+    "project_id": "yaran-7e7f0",
+    "storage_bucket": "yaran-7e7f0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:241174673211:android:f6db3dfd2197333c",
+        "android_client_info": {
+          "package_name": "me.yaran.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "241174673211-o2sqcvpp4qiggt0b75aqkveti017f065.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "me.yaran.app",
+            "certificate_hash": "4b10a278e64cffb7d024e0a13c1e44a7805a2825"
+          }
+        },
+        {
+          "client_id": "241174673211-4o6qepsd1phd3t9j5m969in4dkf6vvc9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCkypiFFugBnhsRRn1Cd4GW5YTRZGmHZk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "241174673211-4o6qepsd1phd3t9j5m969in4dkf6vvc9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

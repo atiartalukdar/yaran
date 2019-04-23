@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Abobut Us" />
+        <item
+            android:id="@+id/nav_category"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Category"
+            />
+        <item
+            android:id="@+id/nav_market"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Markets" />
+        <item
+            android:id="@+id/nav_closedToYou"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Closed to You" />
+        <item
+            android:id="@+id/nav_media"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Media" />
+        <item
+            android:id="@+id/nav_facebook"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Facebook" />
+        <item
+            android:id="@+id/nav_pools"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Pools" />
+        <item
+            android:id="@+id/nav_contact"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Contact Us" />
+    </group>
+</menu>
