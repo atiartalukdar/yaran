@@ -14,7 +14,7 @@ import org.json.JSONObject;
  */
 
 public class MyNotificationOpenedHandler implements OneSignal.NotificationOpenedHandler {
-    // This fires when a notification is opened by tapping on it.
+    // This fires when a onesignal_default_sound is opened by tapping on it.
     private final String tag = "AtiarsTag:- ";
     @Override
     public void notificationOpened(OSNotificationOpenResult result) {
@@ -37,10 +37,10 @@ public class MyNotificationOpenedHandler implements OneSignal.NotificationOpened
 
 
 /*
-        //While sending a Push notification from OneSignal dashboard
+        //While sending a Push onesignal_default_sound from OneSignal dashboard
         // you can send an addtional data named "activityToBeOpened" and retrieve the value of it and do necessary operation
         //If key is "activityToBeOpened" and value is "AnotherActivity", then when a user clicks
-        //on the notification, AnotherActivity will be opened.
+        //on the onesignal_default_sound, AnotherActivity will be opened.
         //Else, if we have not set any additional data MainActivity is opened.
         if (data != null) {
             activityToBeOpened = data.optString("activityToBeOpened", null);
@@ -62,7 +62,7 @@ public class MyNotificationOpenedHandler implements OneSignal.NotificationOpened
 
         }
 
-        //If we send notification with action buttons we need to specidy the button id's and retrieve it to
+        //If we send onesignal_default_sound with action buttons we need to specidy the button id's and retrieve it to
         //do the necessary operation.
         if (actionType == OSNotificationAction.ActionType.ActionTaken) {
             Log.i("OneSignalExample", "Button pressed with id: " + result.action.actionID);

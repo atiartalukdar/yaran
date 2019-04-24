@@ -27,8 +27,8 @@ android {
         applicationId "me.yaran.app"
         minSdkVersion 15
         targetSdkVersion 28
-        versionCode 5
-        versionName "2.8.4"
+        versionCode 6
+        versionName "2.8.5"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
         manifestPlaceholders = [
