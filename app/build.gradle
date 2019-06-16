@@ -27,8 +27,8 @@ android {
         applicationId "me.yaran.app"
         minSdkVersion 15
         targetSdkVersion 28
-        versionCode 6
-        versionName "2.8.5"
+        versionCode 8
+        versionName "2.8.7"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
         manifestPlaceholders = [
@@ -40,6 +40,12 @@ android {
     buildTypes {
         release {
             minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug{
+            minifyEnabled false
+            shrinkResources false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -57,6 +63,6 @@ dependencies {
     implementation 'com.crashlytics.sdk.android:crashlytics:2.9.9'
     implementation 'com.crashlytics.sdk.android:answers:1.4.7'
 
-    implementation 'com.onesignal:OneSignal:[3.9.1, 3.99.99]'
+    implementation 'com.onesignal:OneSignal:[3.9.2, 3.99.99]'
 
 }

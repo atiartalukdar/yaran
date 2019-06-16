@@ -20,35 +20,34 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name="me.yaran.app.Main2Activity"
-            >
+
+        <activity android:name=".Main2Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="me.yaran.app.MainActivity" />
+        <activity android:name=".MainActivity" />
         <activity
-            android:name="me.yaran.app.SplashScreen"
+            android:name=".SplashScreen"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="me.yaran.app.Web"
+            android:name=".Web"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
 
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="ac065fa4fd7ecf48b4fe2b391d25bcc416e85b2d" />
-
-
-        <meta-data android:name="com.onesignal.NotificationOpened.DEFAULT" android:value="DISABLE" />
+        <meta-data
+            android:name="com.onesignal.NotificationOpened.DEFAULT"
+            android:value="DISABLE" />
 
         <service
             android:name=".MyNotificationExtenderService"
-            android:permission="android.permission.BIND_JOB_SERVICE"
-            android:exported="false">
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE">
             <intent-filter>
                 <action android:name="com.onesignal.NotificationExtender" />
             </intent-filter>

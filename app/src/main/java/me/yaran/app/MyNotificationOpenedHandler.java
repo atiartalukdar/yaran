@@ -1,4 +1,5 @@
 package me.yaran.app;
+import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 import android.widget.Toast;
@@ -16,6 +17,13 @@ import org.json.JSONObject;
 public class MyNotificationOpenedHandler implements OneSignal.NotificationOpenedHandler {
     // This fires when a onesignal_default_sound is opened by tapping on it.
     private final String tag = "AtiarsTag:- ";
+
+    private final Context context;
+
+    public MyNotificationOpenedHandler(Context context) {
+        this.context = context;
+    }
+
     @Override
     public void notificationOpened(OSNotificationOpenResult result) {
         OSNotificationAction.ActionType actionType = result.action.type;

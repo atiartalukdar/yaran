@@ -52,7 +52,7 @@ public class Main2Activity extends AppCompatActivity {
                 .inFocusDisplaying(OneSignal.OSInFocusDisplayOption.Notification)
                 .unsubscribeWhenNotificationsAreDisabled(true)
                 .autoPromptLocation(true)
-                .setNotificationOpenedHandler(new MyNotificationOpenedHandler())
+                .setNotificationOpenedHandler(new MyNotificationOpenedHandler(this))
                 //.setNotificationReceivedHandler( new MyNotificationReceivedHandler() )
                 .init();
 
