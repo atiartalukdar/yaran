@@ -4,6 +4,8 @@ import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
@@ -65,7 +67,8 @@ public class Main2Activity extends AppCompatActivity {
 
         if (!DetectConnection.checkInternetConnection(this)) {
             Toast.makeText(getApplicationContext(), "No Internet!", Toast.LENGTH_SHORT).show();
-            initView();
+            mWebview.getSettings().setCacheMode( WebSettings.LOAD_CACHE_ELSE_NETWORK );
+
         } else {
             openWebView();
             //renderWebPage(linkToOpen);
@@ -116,7 +119,6 @@ public class Main2Activity extends AppCompatActivity {
         mWebview.getSettings().setAppCachePath(getApplication().getCacheDir().toString());
         mWebview.setWebViewClient(new WebViewClient(){
 
-
             @Override
             public void onPageStarted(WebView view, String url, Bitmap favicon) {
                 //playVideo();
@@ -133,7 +135,6 @@ public class Main2Activity extends AppCompatActivity {
                 mWebview.setVisibility(View.VISIBLE);
                 mWebview.reload();
             }
-
         });
 
         mWebview.getSettings().setCacheMode(WebSettings.LOAD_DEFAULT);
@@ -151,6 +152,14 @@ public class Main2Activity extends AppCompatActivity {
         pd.setVisibility(View.VISIBLE);
         imageView.setVisibility(View.VISIBLE);
         mWebview.setVisibility(View.GONE);
+
+        mWebview.getSettings().setAppCacheMaxSize( 100 * 1024 * 1024 ); // 100MB
+        mWebview.getSettings().setAppCachePath( getApplicationContext().getCacheDir().getAbsolutePath() );
+        mWebview.getSettings().setAllowFileAccess( true );
+        mWebview.getSettings().setAppCacheEnabled( true );
+        mWebview.getSettings().setJavaScriptEnabled( true );
+        mWebview.getSettings().setCacheMode( WebSettings.LOAD_DEFAULT ); // load online by default
+
 
     }
 
@@ -198,6 +207,11 @@ public class Main2Activity extends AppCompatActivity {
         super.onStop();
     }
 
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService( CONNECTIVITY_SERVICE );
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    }
 
     class MyBrowser extends WebViewClient {
 
