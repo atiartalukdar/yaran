@@ -27,12 +27,12 @@ android {
         applicationId "me.yaran.app"
         minSdkVersion 15
         targetSdkVersion 28
-        versionCode 8
-        versionName "2.8.7"
+        versionCode 10
+        versionName "3.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
         manifestPlaceholders = [
-                onesignal_app_id: '52e27265-a8b5-4b8e-9edc-4eb7316be211',
+                onesignal_app_id: '424adad9-0cd1-4cc1-908e-41a6319abf53',
                 // Project number pulled from dashboard, local value is ignored.
                 onesignal_google_project_number: 'REMOTE'
         ]

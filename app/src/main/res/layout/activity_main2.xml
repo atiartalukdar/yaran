@@ -28,7 +28,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/splashImage"
-                android:src="@drawable/yaransplash" />
+                android:src="@drawable/splash1" />
 
             <ProgressBar
                 android:id="@+id/pbMain"
